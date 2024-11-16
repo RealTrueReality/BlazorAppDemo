@@ -1,0 +1,17 @@
+E:\RiderProjects\BlazorApp\AspireApp1.Database\bin\Debug\net8.0\AspireApp1.Database.deps.json
+E:\RiderProjects\BlazorApp\AspireApp1.Database\bin\Debug\net8.0\AspireApp1.Database.dll
+E:\RiderProjects\BlazorApp\AspireApp1.Database\bin\Debug\net8.0\AspireApp1.Database.pdb
+E:\RiderProjects\BlazorApp\AspireApp1.Database\bin\Debug\net8.0\AspireApp1.Models.dll
+E:\RiderProjects\BlazorApp\AspireApp1.Database\bin\Debug\net8.0\AspireApp1.Models.pdb
+E:\RiderProjects\BlazorApp\AspireApp1.Database\obj\Debug\net8.0\AspireApp1.Database.csproj.AssemblyReference.cache
+E:\RiderProjects\BlazorApp\AspireApp1.Database\obj\Debug\net8.0\AspireApp1.Database.GeneratedMSBuildEditorConfig.editorconfig
+E:\RiderProjects\BlazorApp\AspireApp1.Database\obj\Debug\net8.0\AspireApp1.Database.AssemblyInfoInputs.cache
+E:\RiderProjects\BlazorApp\AspireApp1.Database\obj\Debug\net8.0\AspireApp1.Database.AssemblyInfo.cs
+E:\RiderProjects\BlazorApp\AspireApp1.Database\obj\Debug\net8.0\AspireApp1.Database.csproj.CoreCompileInputs.cache
+E:\RiderProjects\BlazorApp\AspireApp1.Database\obj\Debug\net8.0\AspireAp.ADDADF78.Up2Date
+E:\RiderProjects\BlazorApp\AspireApp1.Database\obj\Debug\net8.0\AspireApp1.Database.dll
+E:\RiderProjects\BlazorApp\AspireApp1.Database\obj\Debug\net8.0\refint\AspireApp1.Database.dll
+E:\RiderProjects\BlazorApp\AspireApp1.Database\obj\Debug\net8.0\AspireApp1.Database.pdb
+E:\RiderProjects\BlazorApp\AspireApp1.Database\obj\Debug\net8.0\ref\AspireApp1.Database.dll
+E:\RiderProjects\BlazorApp\AspireApp1.Database\bin\Debug\net8.0\AspireApp1.Database.runtimeconfig.json
+E:\RiderProjects\BlazorApp\AspireApp1.Database\obj\Debug\net8.0\AspireApp1.Database.genruntimeconfig.cache

@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\AspireApp1.Database\AspireApp1.Database.csproj" />
+      <ProjectReference Include="..\AspireApp1.Models\AspireApp1.Models.csproj" />
+    </ItemGroup>
+
+</Project>

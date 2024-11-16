@@ -1,0 +1,36 @@
+﻿@page "/login"
+
+
+@using AspireApp1.Models.Models
+@using AspireApp1.Web.Authentication
+@using Microsoft.AspNetCore.Components.Authorization
+@inject ApiClient ApiClient;
+@inject AuthenticationStateProvider AuthProvider;
+@inject NavigationManager NavigationManager;
+<PageTitle>登录</PageTitle>
+
+<h1>登录</h1>
+<br>
+<GroupBox Title="使用本地账户登录"
+          style="margin-top: 1.5rem; width: 800px; font-size: larger">
+    <ValidateForm Model="@Input" OnValidSubmit="HandleValidSubmit" DisableAutoSubmitFormByEnter="true">
+        <BootstrapInput @bind-Value="@Input.UserName" PlaceHolder="用户名" type="text" style="width: 400px;"/>
+        <BootstrapInput @bind-Value="@Input.Password" PlaceHolder="密码" type="password" style="width: 400px;"/>
+        <Button ButtonType="ButtonType.Submit" Text="登陆"></Button>
+    </ValidateForm>
+</GroupBox>
+
+@code {
+    
+    private LoginModel Input { get; set; } = new();
+    
+    private async Task HandleValidSubmit(EditContext arg) {
+        var res = await ApiClient.PostAsJsonAsync<LoginResponseModel, LoginModel>("/api/auth/login", Input);
+        if (res?.Token is not null) {
+            var customAuthStateProvider = AuthProvider as CustomAuthStateProvider;
+            customAuthStateProvider?.NotifyUserAuthenticated(res.Token);
+            NavigationManager.NavigateTo("/");
+        }
+    }
+
+}

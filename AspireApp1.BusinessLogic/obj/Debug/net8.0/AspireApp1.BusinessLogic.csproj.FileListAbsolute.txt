@@ -1,0 +1,17 @@
+E:\RiderProjects\BlazorApp\AspireApp1.BusinessLogic\obj\Debug\net8.0\AspireApp1.BusinessLogic.csproj.AssemblyReference.cache
+E:\RiderProjects\BlazorApp\AspireApp1.BusinessLogic\obj\Debug\net8.0\AspireApp1.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+E:\RiderProjects\BlazorApp\AspireApp1.BusinessLogic\obj\Debug\net8.0\AspireApp1.BusinessLogic.AssemblyInfoInputs.cache
+E:\RiderProjects\BlazorApp\AspireApp1.BusinessLogic\obj\Debug\net8.0\AspireApp1.BusinessLogic.AssemblyInfo.cs
+E:\RiderProjects\BlazorApp\AspireApp1.BusinessLogic\obj\Debug\net8.0\AspireApp1.BusinessLogic.csproj.CoreCompileInputs.cache
+E:\RiderProjects\BlazorApp\AspireApp1.BusinessLogic\bin\Debug\net8.0\AspireApp1.BusinessLogic.deps.json
+E:\RiderProjects\BlazorApp\AspireApp1.BusinessLogic\bin\Debug\net8.0\AspireApp1.BusinessLogic.dll
+E:\RiderProjects\BlazorApp\AspireApp1.BusinessLogic\bin\Debug\net8.0\AspireApp1.BusinessLogic.pdb
+E:\RiderProjects\BlazorApp\AspireApp1.BusinessLogic\bin\Debug\net8.0\AspireApp1.Database.dll
+E:\RiderProjects\BlazorApp\AspireApp1.BusinessLogic\bin\Debug\net8.0\AspireApp1.Models.dll
+E:\RiderProjects\BlazorApp\AspireApp1.BusinessLogic\bin\Debug\net8.0\AspireApp1.Database.pdb
+E:\RiderProjects\BlazorApp\AspireApp1.BusinessLogic\bin\Debug\net8.0\AspireApp1.Models.pdb
+E:\RiderProjects\BlazorApp\AspireApp1.BusinessLogic\obj\Debug\net8.0\AspireAp.A76666A0.Up2Date
+E:\RiderProjects\BlazorApp\AspireApp1.BusinessLogic\obj\Debug\net8.0\AspireApp1.BusinessLogic.dll
+E:\RiderProjects\BlazorApp\AspireApp1.BusinessLogic\obj\Debug\net8.0\refint\AspireApp1.BusinessLogic.dll
+E:\RiderProjects\BlazorApp\AspireApp1.BusinessLogic\obj\Debug\net8.0\AspireApp1.BusinessLogic.pdb
+E:\RiderProjects\BlazorApp\AspireApp1.BusinessLogic\obj\Debug\net8.0\ref\AspireApp1.BusinessLogic.dll

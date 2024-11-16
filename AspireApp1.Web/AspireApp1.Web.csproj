@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\AspireApp1.Models\AspireApp1.Models.csproj" />
+        <ProjectReference Include="..\AspireApp1.ServiceDefaults\AspireApp1.ServiceDefaults.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Blazored.Toast" Version="4.2.1" />
+      <PackageReference Include="BootstrapBlazor" Version="9.0.0" />
+      <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.1.2" />
+    </ItemGroup>
+
+</Project>

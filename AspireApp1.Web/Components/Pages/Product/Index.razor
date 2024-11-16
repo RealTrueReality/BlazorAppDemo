@@ -1,0 +1,110 @@
+﻿@page "/products"
+@using System.Text.Json
+@using AspireApp1.Models.Entities
+@using AspireApp1.Models.Models
+@using Microsoft.AspNetCore.Authorization
+@inject MessageService MessageService
+@rendermode InteractiveServer
+@* *@
+@* @attribute [Authorize(Roles = "Admin")] *@
+
+
+<h3>Products</h3>
+<br>
+
+@if (Products is null) {
+    <p>Loading......</p>
+}
+else {
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="text-center">
+        <tr>
+
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Description</th>
+            <th>Created Time</th>
+            <th colspan="2">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Products) {
+            <tr>
+
+                <td>@item.ProductName</td>
+                <td>@item.Price</td>
+                <td>@item.Quantity</td>
+                <td>@item.Description</td>
+                <td>@item.CreateTime</td>
+                <td class="text-center">
+                    <a class="btn btn-primary" href="/product/@item.Id">Edit</a>
+                </td>
+                <AuthorizeView Roles="Admin">
+                    <Authorized>
+                        <td class="text-center">
+                            @* <a class="btn btn-danger" href="/product/delete/@item.Id">Delete</a> *@
+                            <PopConfirmButton Placement="Placement.Top"
+                                              Color="Color.Danger"
+                                              ConfirmIcon="fa-solid fa-triangle-exclamation text-danger"
+                                              ConfirmButtonColor="Color.Danger"
+                                              Text="删除"
+                                              Content="确定删除数据吗？"
+                                              OnConfirm="@(async () => await HandleOnDeleteConfirm(item.Id))"/>
+                        </td>
+                        
+                    </Authorized>
+                </AuthorizeView>
+
+
+            </tr>
+        }
+        </tbody>
+
+    </table>
+}
+
+<a class="btn btn-primary" href="/product">Add a product</a>
+
+
+@code {
+    private List<ProductModel>? Products { get; set; }
+    [Inject] public ApiClient? ApiClient { get; set; }
+
+    protected override async Task OnInitializedAsync() {
+        
+        await LoadProducts();
+    }
+
+    private async Task LoadProducts() {
+        var res = await ApiClient?.GetFromJsonAsync<BaseResponseModel>("/api/product")!;
+        if (res is { IsSuccess: true }) {
+            Products = JsonSerializer.Deserialize<List<ProductModel>>(res.Data?.ToString() ?? string.Empty, options: new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+        }
+
+        StateHasChanged();
+    }
+
+    private async Task HandleOnDeleteConfirm(int itemId) {
+        var httpResponseMessage = await ApiClient?.DeleteAsync<BaseResponseModel>($"/api/product/{itemId}")!;
+        if (httpResponseMessage is { IsSuccess: true }) {
+            await LoadProducts();
+            await ShowCloseMessage("删除成功!", Color.Success);
+        }
+        else {
+            await ShowCloseMessage("删除失败!", Color.Danger);
+        }
+    }
+
+    private async Task ShowCloseMessage(string msg, Color color) {
+        await MessageService.Show(new MessageOption {
+            Content = msg,
+            Color = color,
+            Icon = "fa-solid fa-circle-check",
+            ShowDismiss = true,
+            IsAutoHide = true,
+            OnDismiss = () => Task.CompletedTask,
+        });
+    }
+
+}

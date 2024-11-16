@@ -1,0 +1,12 @@
+E:\RiderProjects\BlazorApp\AspireApp1.ServiceDefaults\bin\Debug\net8.0\AspireApp1.ServiceDefaults.deps.json
+E:\RiderProjects\BlazorApp\AspireApp1.ServiceDefaults\bin\Debug\net8.0\AspireApp1.ServiceDefaults.dll
+E:\RiderProjects\BlazorApp\AspireApp1.ServiceDefaults\bin\Debug\net8.0\AspireApp1.ServiceDefaults.pdb
+E:\RiderProjects\BlazorApp\AspireApp1.ServiceDefaults\obj\Debug\net8.0\AspireApp1.ServiceDefaults.csproj.AssemblyReference.cache
+E:\RiderProjects\BlazorApp\AspireApp1.ServiceDefaults\obj\Debug\net8.0\AspireApp1.ServiceDefaults.GeneratedMSBuildEditorConfig.editorconfig
+E:\RiderProjects\BlazorApp\AspireApp1.ServiceDefaults\obj\Debug\net8.0\AspireApp1.ServiceDefaults.AssemblyInfoInputs.cache
+E:\RiderProjects\BlazorApp\AspireApp1.ServiceDefaults\obj\Debug\net8.0\AspireApp1.ServiceDefaults.AssemblyInfo.cs
+E:\RiderProjects\BlazorApp\AspireApp1.ServiceDefaults\obj\Debug\net8.0\AspireApp1.ServiceDefaults.csproj.CoreCompileInputs.cache
+E:\RiderProjects\BlazorApp\AspireApp1.ServiceDefaults\obj\Debug\net8.0\AspireApp1.ServiceDefaults.dll
+E:\RiderProjects\BlazorApp\AspireApp1.ServiceDefaults\obj\Debug\net8.0\refint\AspireApp1.ServiceDefaults.dll
+E:\RiderProjects\BlazorApp\AspireApp1.ServiceDefaults\obj\Debug\net8.0\AspireApp1.ServiceDefaults.pdb
+E:\RiderProjects\BlazorApp\AspireApp1.ServiceDefaults\obj\Debug\net8.0\ref\AspireApp1.ServiceDefaults.dll

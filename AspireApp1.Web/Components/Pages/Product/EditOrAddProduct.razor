@@ -1,0 +1,71 @@
+﻿@page "/product/{id:int?}"
+@using System.Text.Json
+@using AspireApp1.Models.Entities
+@using AspireApp1.Models.Models
+@rendermode InteractiveServer
+@inject ApiClient ApiClient
+@inject NavigationManager NavigationManager 
+@if (Id.HasValue) {
+    <h3>Edit Product</h3>
+}
+else {
+    <h3>Add Product</h3>
+}
+<GroupBox Title="@(_product?.ProductName is null ? "Adding Product" : $"Editing Product{_product.ProductName}")"
+          style="margin-top: 1.5rem;" >
+    <ValidateForm Model="@_product" OnValidSubmit="OnValidSubmit" DisableAutoSubmitFormByEnter="true">
+        <EditorForm TModel="ProductModel">
+            <FieldItems>
+                <EditorItem @bind-Field="@context.Id" Ignore="true"/>
+                <EditorItem @bind-Field="@context.ProductName"/>
+                <EditorItem @bind-Field="@context.Price" Step="0.1"/>
+                <EditorItem @bind-Field="@context.Quantity" Step="1"/>
+                <EditorItem @bind-Field="@context.Quantity" Step="1"/>
+                <EditorItem @bind-Field="@context.Description"/>
+                <EditorItem @bind-Field="@context.CreateTime" />
+            </FieldItems>
+            <Buttons>
+                <Button ButtonType="ButtonType.Submit" Icon="fa-solid fa-floppy-disk" Text="提交"></Button>
+            </Buttons>
+        </EditorForm>
+    </ValidateForm>
+</GroupBox>
+
+
+
+@code {
+    [Parameter] public int? Id { get; set; }
+    private ProductModel? _product = new();
+
+
+
+    protected override async Task OnAfterRenderAsync(bool firstRender) {
+        if (firstRender) {
+            if (Id.HasValue) {
+                var res = await ApiClient?.GetFromJsonAsync<BaseResponseModel>($"/api/product/{Id}")!;
+                if (res is { IsSuccess: true }) {
+                    _product = JsonSerializer.Deserialize<ProductModel>(res.Data?.ToString() ?? string.Empty, options: new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                }
+
+                StateHasChanged();
+            }
+        }
+
+        await base.OnAfterRenderAsync(firstRender);
+    }
+
+    private async Task OnValidSubmit(EditContext editContext) {
+        if (Id.HasValue) {
+            if (_product != null) {
+                var response = await ApiClient.PutAsJsonAsync<BaseResponseModel,ProductModel>($"/api/product/{Id}", _product);
+            }
+        }
+        else {
+            if (_product != null) {
+                var response = await ApiClient.PostAsJsonAsync<BaseResponseModel,ProductModel>("/api/product", _product);
+            }
+        }
+       NavigationManager.NavigateTo("/products");
+    }
+
+}
